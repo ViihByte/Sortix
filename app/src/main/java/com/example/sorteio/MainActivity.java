@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -26,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void selecionarBotao(View v){
+            int valoresR = new Random().nextInt(11);
             TextView texto = findViewById(R.id.textoResultado);
-            texto.setText("Texto alterado com Sucesso");
+            texto.setText("O Número sorteado foi: " + valoresR);
     }
 }
